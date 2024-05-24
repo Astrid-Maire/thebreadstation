@@ -1,11 +1,11 @@
 /*************farver***********/
 :root {
-  --primary-color: rgb(245, 244, 241);
-  --secondary-color: rgb(207, 198, 185);
-  --accent-color: rgb(42, 31, 30);
-  --tertier-color: rgb(85, 67, 62);
-  --baggrund-color: rgb(154, 130, 108);
-  --baggrun-color: rgb(122, 98, 84);
+  --a-color: rgb(245, 244, 241);
+  --b-color: rgb(207, 198, 185);
+  --c-color: rgb(154, 130, 108);
+  --d-color: rgb(122, 98, 84);
+  --e-color: rgb(85, 67, 62);
+  --f-color: rgb(42, 31, 30);
 }
 /*************farver***********/
 
