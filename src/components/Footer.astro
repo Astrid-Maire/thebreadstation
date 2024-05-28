@@ -1,0 +1,93 @@
+---
+import "../styles/global.css";
+---
+<footer>
+    <div class="grid_footer">
+        <div class="col_footer-1">
+            <ul>
+                <li><a class="link" href="om">Om os</a></li>
+                <li><a class="link" href="udvalg">Vores udvalg</a></li>
+                <li><a class="link" href="konkakt">Konkakt os</a></li>
+            </ul>
+        </div>
+        <div class="col_footer-2">
+            <ul>
+                <li>Navn: Astrid Lindholm</li>
+                <li>Telefonnummer: +45 28705354</li>
+                <li>Mail: asli0001@stud.kea.dk</li>
+                <li><a class="link" href="om_mig.html">Om mig</a></li>
+            </ul>
+        </div>
+        <div class="col_footer-3">
+            <ul>
+                <li>The Bread Station ApS</li>
+                <li>Charlottenlund Stationsplads 2</li>
+                <li>2920 Charlottenlund</li>
+                <li>Tlf nr: +45 39 30 37 36</li>
+                <li>Mail: perbrun4@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<style>
+ul {
+  list-style-type: none;
+}
+
+@media (max-width: 800px) {
+  .grid_footer {
+    display: grid;
+    color: var(--f-color);
+  }
+
+  .grid_footer li a {
+    color: var(--f-color);
+    text-decoration: none;
+  }
+
+  .col_footer-1 {
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .col_footer-3 {
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 8%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .grid_footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--f-color);
+  }
+
+  .grid_footer li a {
+    color: var(--f-color);
+    text-decoration: none;
+  }
+
+  .col_footer-1 {
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+  }
+
+  .col_footer-3 {
+    line-height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+}
+</style>
