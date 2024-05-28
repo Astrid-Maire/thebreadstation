@@ -19,11 +19,11 @@
 
 /***********Tekst størrelse************/
 :root {
-  --h1-size: 4rem;
-  --h2-size: 2.6rem;
-  --p-size: 1.4rem;
-  --footer-size: 1.25rem;
-  --headerAndLink-size: 1rem;
+  --h1-size: 3.7rem;
+  --h2-size: 2.7rem;
+  --p-size: 1.5rem;
+  --footer-size: 1.2rem;
+  --header-size: 1.3rem;
 }
 /***********img format************/
 * {

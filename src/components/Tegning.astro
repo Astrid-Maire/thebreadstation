@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+---
+
+<div class="tegning">
+<div class="col-1">
+    <img src="/svg/bordtegning.svg" alt="Tegning af et Brød">
+    <p>Vores brød er mere end blot et tilbehør - det er hjertet og sjælen i The Bread Station. Med fokus på traditionelle metoder og naturlige ingredienser, bager vi et udvalg af håndlavede brød, herunder sprøde surdejsbrød, saftige baguetter og smagfulde rugbrød. Hver bid er en hyldest til autentisk håndværk og den vidunderlige smag af friskbagt brød.</p>
+</div>
+<div class="col-2">
+    <img src="/svg/vintegning.svg" alt="Tegning af en vin">
+    <p>For os er vin ikke blot en drik, men en oplevelse. Vi kuraterer nøje vores vinkort for at tilbyde et udvalg af nøje udvalgte vine, der komplementerer vores brød og kager perfekt. Fra klassiske rødvine til forfriskende hvidvine og mousserende bobler har vi noget for enhver smag. Lad vores vin være med til at fuldende din kulinariske rejse hos os.</p>
+</div>
+<div class="col-3">
+    <img src="/svg/kagetegning.svg" alt="tegning af en kage">
+    <p> Nyd den søde side af livet med vores udsøgte udvalg af kager og bagværk. Fra traditionelle kager til innovative kreationer, skaber vores konditorer lækre godbidder, der tilfredsstiller enhver sød tand. Fra fristende chokoladekager til delikate tærter og luftige macarons - vores kageudvalg er en hyldest til den perfekte afslutning på ethvert måltid.</p>
+</div>
+</div>
+
+<style>
+.tegning{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 45px;
+padding: 4%;
+background-color: var(--d-color);
+}
+
+img {
+padding: 5%;
+}
+
+p{
+padding: 5% 0 0 5%;
+font-size: 1.4rem;
+text-align: center;
+color: var(--f-color);
+line-height: 1.5;
+}
+
+
+</style>
