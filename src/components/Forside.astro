@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";
+import Menu from "../components/Menu.astro";
+---
+<body>
+    <div class="forsidemenu">
+        <Menu />
+    </div>
+    <div class="forsidebillede">
+        <img src="/img/bord.jpg" alt="Forsidebilledet">
+    </div>
+    
+</body>
+<style>
+    .forsidebillede {
+        position: relative; 
+        z-index: 1;
+    }
+    
+    .forsidemenu {
+        position: absolute; 
+        z-index: 2;
+    }
+
+    img {
+        padding: auto;
+    }
+</style>
