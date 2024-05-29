@@ -1,10 +1,27 @@
 ---
 import "../styles/global.css";
 import Firekant1 from "../components/Firekant1.astro";
-
 ---
 <body>
-    
 
+    <img src="/img/kort.jpg" alt="">
+    <div class="firekant">
     <Firekant1/>
+</div>
 </body>
+
+<style>
+img{
+    width: 50%;
+        position: absolute; 
+        top: 120%; 
+        left: 5%; 
+        z-index: 2;
+}
+
+.firekant{
+    z-index: 1;
+}
+
+
+</style>

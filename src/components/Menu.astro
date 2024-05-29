@@ -3,9 +3,6 @@ import "../styles/global.css";
 ---
 <header>
     <div class="header-container">
-        <a href="/index.html">
-          <img  src="/svg/logo.svg" alt="logo" />
-        </a>
       <nav>
         <div class="burger-menu">
           <div class="container_header">
@@ -134,61 +131,56 @@ import "../styles/global.css";
     }
   
     @media (min-width: 800px) {
-      .checkbox {
-        display: none;
-      }
-  
-    img {
-        width: 40%;
-        height: 20%;
-        display: flex;
-    right: 0;
-    padding: 2%;
-    }
+  .header-container {
+    justify-content: flex-end; /* Tilføjet justering til højre */
+  }
 
-      .menu li {
-        list-style: none;
-        margin: 0;
-      }
-  
-      .menu a {
-        text-decoration: none;
-        color: var(--f-color);
-        font-size: 18px;
-        display: block;
-        padding: 20px;
-      }
-  
-      .menu a:hover {
-        font-weight: bolder;
-      }
-  
-      .menu {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 20px;
-        margin: auto;
-      }
-  
-      nav a {
-        color: var(--a-color);
-        font-weight: bold;
-        text-decoration: none;
-      }
-  
-      header .menu a {
-        text-decoration: none;
-        color: var(--a-color);
-        font-size: var(--header-size);
-        align-items: center;
-        justify-content: flex-end;
-      }
-    }
-  
-    .menu.active {
-      display: block;
-    }
-  
+  .checkbox {
+    display: none;
+  }
+
+  .menu li {
+    list-style: none;
+    margin: 10% 0 0 0 ;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: var(--f-color);
+    font-size: 18px;
+    display: block;
+    padding: 20px;
+  }
+
+  .menu a:hover {
+    font-weight: bolder;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin: auto;
+  }
+
+  nav a {
+    color: var(--a-color);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  header .menu a {
+    text-decoration: none;
+    color: var(--a-color);
+    font-size: var(--header-size);
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.menu.active {
+  display: block;
+}
   </style>
   
   <script>
