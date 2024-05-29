@@ -1,0 +1,124 @@
+---
+import "../styles/global.css";
+---
+<header>
+    <div class="header-container">
+        <nav>
+            <div class="burger-menu">
+                <div class="container_header">
+                    <input class="checkbox" type="checkbox" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="menu" id="menu">
+                        <ul>
+                            <li>
+                                <a href="/udvalg" class="dropdown-trigger">Udvalg</a>
+                                <div class="dropdown-box"> 
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Brød</a></li>
+                                        <li><a href="#">Boller</a></li>
+                                        <li><a href="#">Kage</a></li>
+                                        <li><a href="#">Wienerbrød</a></li>
+                                        <li><a href="#">Vin</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="/kontakt">Kontakt os</a></li>
+                            <li><a href="/om">Om os</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+  
+  
+  <style>
+    .header-container {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+body {
+    background-color: var(--c-color);
+}
+
+.checkbox {
+    display: none;
+}
+
+.menu li {
+    list-style: none;
+    display: inline; 
+    margin-right: 20px; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--a-color); 
+    font-size: var(--header-size); 
+    display: inline-block; 
+    padding: 20px;
+}
+nav a {
+    color: var(--a-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: var(--a-color);
+    font-size: var(--header-size);
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-box {
+    display: none;
+    position: absolute;
+    background-color: var(--c-color); 
+    border: 1px solid var(--f-color); 
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dropdown-box.active {
+    display: block;
+}
+
+.menu.active {
+    display: block;
+}
+   </style>
+   
+  <script>
+ document.addEventListener("DOMContentLoaded", function () {
+    const dropdownTrigger = document.querySelector(".dropdown-trigger");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    const dropdownBox = document.querySelector(".dropdown-box");
+
+    dropdownTrigger.addEventListener("click", function (event) {
+        event.preventDefault(); 
+        dropdownMenu.classList.toggle("active");
+        dropdownBox.classList.toggle("active");
+    });
+});
+   </script>
+   
