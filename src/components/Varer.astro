@@ -1,10 +1,16 @@
 
----
-const
+--- 
+const { data } = Astro.props;
+console.log(data); 
 
----
+--- 
+
 <body>
-   
+   <h2> {data.name}</h2>
+   <h3>{data.name2}</h3>
+   <img src={data.image} alt="">
+   <p>{data.prishele}</p> <p></p>
+   <p>{data.tekstomproduket}</p>
    
   
 </body>
