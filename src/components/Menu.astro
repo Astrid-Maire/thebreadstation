@@ -208,19 +208,19 @@ import "../styles/global.css";
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const checkbox = document.getElementById("menu-toggle");
-            const menu = document.getElementById("menu");
-            const udvalgLink = document.getElementById("udvalg-link");
-            const udvalgSubmenu = document.getElementById("udvalg-submenu");
+     document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    const udvalgLink = document.getElementById("udvalg-link");
+    const udvalgSubmenu = document.getElementById("udvalg-submenu");
 
-            checkbox.addEventListener("change", function () {
-                menu.classList.toggle("active", checkbox.checked);
-            });
+    checkbox.addEventListener("change", function () {
+      menu.classList.toggle("active", checkbox.checked);
+    });
 
-            udvalgLink.addEventListener("click", function (event) {
-                event.preventDefault(); // Prevent the default link behavior
-                udvalgSubmenu.classList.toggle("active");
-            });
-        });
+    udvalgLink.addEventListener("click", function (event) {
+      event.preventDefault(); 
+      udvalgSubmenu.classList.toggle("active");
+    });
+  });
     </script>
