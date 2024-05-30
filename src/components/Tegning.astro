@@ -18,6 +18,23 @@ import "../styles/global.css";
 </div>
 
 <style>
+ @media (max-width: 800px) {
+p{
+font-size: 1.2rem;
+text-align: center;
+color: var(--f-color);
+line-height: 1.5;
+}
+.col-1, .col-2, .col-3{
+padding: 3%;
+background-color: var(--d-color);
+}
+
+img {
+    padding: 4%;
+}}
+
+@media (min-width: 800px) {
 .tegning{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -37,6 +54,6 @@ text-align: center;
 color: var(--f-color);
 line-height: 1.5;
 }
-
+}
 
 </style>

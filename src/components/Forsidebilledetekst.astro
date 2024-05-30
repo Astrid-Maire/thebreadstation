@@ -4,31 +4,61 @@ import "../styles/global.css";
 import Forside from "../components/Forside.astro";
 
 ---
-
 <body>
-        <div class="image-container">
-          <Forside />
-          <div class="text-box">
-            <h1>The Bread Station</h1>
-          </div>
-        </div>
-
-
-</body>
-
-<style>
-.image-container > * {
-  z-index: 1;}
-
+    <div class="image-container">
+      <Forside />
+      <div class="text-box">
+        <h1>The Bread Station</h1>
+      </div>
+    </div>
+  </body>
+  
+  <style>
+  .image-container > * {
+    z-index: 1;
+  }
+  
   .text-box {
-  position: absolute; 
-  bottom: 5%;
-  right: 0%; 
-  background-color: var(--a-color); 
-  color: var(--f-color); 
-  padding: 0 2% 0 2%; 
-  z-index: 2;
-  font-size: var(--h1-size);
-  border: 230% solid var(--f-color);
-}
-</style>
+    position: absolute; 
+    bottom: 5%;
+    right: 0%; 
+    background-color: var(--a-color); 
+    color: var(--f-color); 
+    padding: 0 2% 0 2%; 
+    z-index: 2;
+    font-size: var(--h1-size);
+    border: 230% solid var(--f-color);
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .text-box {
+      font-size: 3em; 
+      position: absolute;
+      bottom: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .text-box {
+      font-size: 3em; 
+      position: absolute;
+      bottom: 40%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .text-box {
+      font-size: 2em; 
+      position: absolute;
+      bottom: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .text-box {
+      font-size: 2em; 
+      position: absolute;
+      bottom: 60%;
+    }
+  }
+  </style>

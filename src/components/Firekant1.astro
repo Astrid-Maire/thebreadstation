@@ -2,16 +2,59 @@
 import "../styles/global.css";
 ---
 <body>
+  <div class="firekant-tekst"> 
+<div class="firekant">
     <div class="firekant-1"></div>
-    
+    <img src="img/hanværk.jpg" alt="">
+  </div>
+  <div class="firekant">
+    <h2>Vores hånværk </h2>
+    <p>Hos The Bread Station er vores håndværk kernen i alt, hvad vi gør. Vores bagning starter med en stenmølle, hvor vi maler frisk mel. Vi modtager dansk og italiensk korn i sække og maler det på vores egen kværn fra Häussler i Helligkreuztal. Mens kværnen larmer og støver, kværner den effektivt fuldkornsmel, som vi bruger i hele kornets form – intet sigtes fra. Derfor indeholder alle vores brød og kager både skaldelene og kimet. Vi sælger også friskmalet fuldkornsmel til hjemmebagere, så de kan nyde godt af den samme kvalitet derhjemme.</p>
+  <p>Vi bager alt i vores stenovn, en Rolls Royce-udgave fra Franske Fringand, som fylder en betydelig del af bageriet. Den vejer to tons og holder varmen døgnet rundt. Alt fra rugbrød og Madeleines til hindbærsnitter bages i denne ovn, som er både monstrøs og fintfølende.</p>
+  </div>
+</div>
+
 </body>
 <style>
+
+  body{
+    background-color: var(--c-color);
+  }
   .firekant-1 {
-    width: 55%;  
-    height: 550px; 
+    width: 91%;  
+    height: 99%; 
     background-color: var(--e-color); 
     box-shadow: 0 1px 15px 0 var(--f-color);
     margin: 2% 0 2% 2%;
+    z-index: 1;
+  }
+
+  img{
+    position: relative;
+    width: 50%;
+    position: absolute;
+    top: 195%; 
+    left:3% ;
+  }
+
+  .firekant-tekst{
+    display: grid;
+    grid-template-columns: 10fr 7fr;
+  }
+
+  p{
+    font-size: 1.3rem;
+    color: var(--f-color);
+    line-height: 37px;
+    padding-right: 8%;
+    padding-top: 2%;
+  }
+ 
+
+  h2{
+    font-size: var(--h2-size);
+    color: var(--f-color);
+    padding-top: 5%;
   }
 
 </style>

@@ -2,23 +2,27 @@
 import "../styles/global.css";
 ---
 <body>
- <h2> Hvem er The Bread Station <h2/>
+  <div class="farve">
+ <h1> Hvem er The Bread Station <h1/>
 <p>  Vi hos The Bread Station er en innovativ bagerikæde, grundlagt med en mission om at bringe ægte håndværksbagning tilbage til forbrugerne. Vi er et team af passionerede bagere, der bruger traditionelle bageteknikker og de bedste økologiske ingredienser for at skabe brød og bagværk af højeste kvalitet. Med rødder i Danmark henter vi inspiration fra den skandinaviske bagekunst, kendt for dens enkle, men raffinerede smagsprofiler.</p>
+<div class="padding">
 <p>  Vores bageri er beliggende i Charlottenlund. Navnet The Bread Station stammer fra vores unikke beliggenhed på stationen, i det gamle ilgodspakhus, som er en del af stationen i hjertet af landsbyen. Vi ligger ikke på hovedgaden, da vi arbejder hele natten for at kunne bage friske brød. Vi maler, støver, bager, oser og larmer en lille smule, for sådan bliver det daglige brød frembragt, nat og dag.
   Vi ønsker at tilbyde hjemmelavede produkter og håndholdte specialiteter. Vores personale er vidende og engagerede, og vi værdsætter interesserede kunder. Vores mål er at skabe et sted med værtskab og service i højsædet.</p>
+</div>
+</div>
 </body>
 
 <style>
 
-body{
+.farve{
   background-color: var(--d-color);
 }
 
-h2 {
+h1 {
   color: var(--f-color); 
-  font-size: var(--h2-size);
+  font-size: var(--h1-size);
   text-align: center;
-  padding: 4% 0 0 0 ;
+  padding: 2% 0 0 0 ;
 }
 
 p { 
@@ -27,5 +31,9 @@ p {
   text-align: center;
   padding: 0 15% 2% 15% ;
   line-height: 37px;
+}
+
+.padding{
+  padding: 0 0 3% ;
 }
 </style>

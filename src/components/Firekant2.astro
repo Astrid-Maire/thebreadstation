@@ -2,15 +2,60 @@
 import "../styles/global.css";
 ---
 <body>
-    <div class="firekant-2"></div>
+    <div class="firekant-tekst"> 
+        <div class="firekant">
+            <h2>Bæredytighed </h2>
+            <p>Hos The Bread Station er bæredygtighed kernen i vores filosofi. Vi bruger kun økologiske ingredienser, og vores mel males frisk på stedet med vores stenmølle, hvilket reducerer transport og energiforbrug.</p>
+            <p>Vi bager kun det brød, vi forventer at sælge, og eventuelt overskud doneres til lokale velgørenhedsorganisationer. Vi sælger også friskmalet fuldkornsmel til hjemmebagere, hvilket hjælper med at reducere madspild. </p>
+         <p>Vores energieffektive stenovn fra Franske Fringand holder varmen døgnet rundt og bruges til alt fra bagning til stegning og kogning, hvilket udnytter varmen optimalt.</p>
+        <p>
+            Vi arbejder tæt sammen med lokale leverandører for at støtte bæredygtigt landbrug og reducere transportafstande. Hos The Bread Station fokuserer vi på kvalitet, økologi og ansvarlig produktion for at skabe en bæredygtig fremtid.</p>
+         </div>
+        <div class="firekant-2">
+        <img src="img/oko.jpg" alt="">
+      </div>
+    </div>
+  </body>
+  
+  <style>
+    .firekant-2 {
+      width: 98%;  
+      height: 91%; 
+      left: 109%;
+      background-color: var(--e-color); 
+      box-shadow: 0 0 0 0 var(--f-color);
+      margin: 8% 0 0 0; 
+      z-index: 1;
+    }
+  
+    img{
+      position: relative;
+      width: 50%;
+      position: absolute;
+      top: 290.5%; 
+      left:47.5% ;
+    }
+
     
-</body>
-<style>
-  .firekant-2 {
-    width: 55%;  
-    height: 500px; 
-    background-color: var(--e-color); 
-    box-shadow: 0 8px 8px var(--f-color);
-    margin: 1% 100px 60px 43%;
+  .firekant-tekst{
+    display: grid;
+    grid-template-columns: 12fr 14fr;
   }
-</style>
+
+  p{
+    font-size: 1.2rem;
+    color: var(--f-color);
+    line-height: 37px;
+    padding-left: 8%;
+    padding-top: 2%;
+    padding-right: 2%;
+  }
+ 
+
+  h2{
+    font-size: var(--h2-size);
+    color: var(--f-color);
+    padding-top: 8%;
+    padding-left: 8%;
+  }
+  </style>
