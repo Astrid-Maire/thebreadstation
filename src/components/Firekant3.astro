@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+---
+<body>
+  <div class="firekant-tekst"> 
+<div class="firekant">
+    <div class="firekant-1"></div>
+    <img src="img/hos.jpg" alt="">
+  </div>
+  <div class="firekant">
+    <h2>Vores hånværk </h2>
+    <p>Kundecentreret service er hjertet af vores tilgang hos The Bread Station. Vi stræber efter at skabe en unik og mindeværdig oplevelse for hver eneste kunde, der træder ind ad vores dør.</p>
+  <p>Vores personale er dedikeret til at imødekomme kundernes behov og ønsker med en venlig og imødekommende attitude. Vi lytter til vores kunders feedback og stræber efter konstant forbedring for at sikre, at vi lever op til deres forventninger.</p>
+<p>Vi tilbyder ikke kun et produkt, men en hel oplevelse, hvor kunden føler sig velkommen og værdsat. Vores mål er at skabe langvarige relationer med vores kunder ved at levere fremragende service og kvalitetsprodukter, der overgår deres forventninger.</p>  
+</div>
+</div>
+
+</body>
+<style>
+
+  body{
+    background-color: var(--c-color);
+  }
+  .firekant-1 {
+    width: 91%;  
+    height: 98%; 
+    background-color: var(--e-color); 
+    box-shadow: 0 1px 15px 0 var(--f-color);
+    margin: 6% 0 2% 2%;
+    z-index: 1;
+  }
+
+  img{
+    position: relative;
+    width: 50%;
+    position: absolute;
+    top: 383%; 
+    left:3% ;
+  }
+
+  .firekant-tekst{
+    display: grid;
+    grid-template-columns: 10fr 7fr;
+  }
+
+  p{
+    font-size: 1.3rem;
+    color: var(--f-color);
+    line-height: 37px;
+    padding-right: 8%;
+    padding-top: 2%;
+  }
+ 
+
+  h2{
+    font-size: var(--h2-size);
+    color: var(--f-color);
+    padding-top: 9%;
+  }
+  .firekant{
+    padding-bottom: 7%;
+  }
+
+</style>

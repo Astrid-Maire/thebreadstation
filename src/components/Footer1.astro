@@ -1,0 +1,148 @@
+---
+import "../styles/global.css";
+---
+<footer>
+    <div class="grid_footer">
+        <div class="col_footer-1">
+            <p>Hjemmesidens sider</p>
+            <ul>
+                <li><a class="link" href="om">Om os</a></li>
+                <li><a class="link" href="udvalg">Vores udvalg</a></li>
+                <li><a class="link" href="kontakt">Kontakt os</a></li>
+            </ul>
+        </div>
+        <div class="col_footer-2">
+                <p>The Breads Stations sociale medier </p>
+                <div class="socialemedie">
+                    <div class="face">
+                <a href="https://www.facebook.com/profile.php?id=61560370106884&is_tour_dismissed">
+                <img src="/svg/facebook.svg" alt="Billedet af Facebook">
+                </a>
+            </div>
+            <div class="inst">
+                <a href="/https://www.instagram.com/thebreadstation_eksamen/?hl=da">
+                <img src="/svg/instagram.svg" alt="Billedet af Instagram">
+            </div>
+            </a>
+            </div>
+        </div>
+        <div class="col_footer-3">
+            <ul>
+                <li>The Bread Station ApS</li>
+                <li>Charlottenlund Stationsplads 2</li>
+                <li>2920 Charlottenlund</li>
+                <li>Tlf nr: +45 39 30 37 36</li>
+                <li>Mail: perbrun4@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<style>
+ul {
+  list-style-type: none;
+}
+
+footer{
+    background-color: var(--d-color);
+}
+
+@media (max-width: 800px) {
+  .grid_footer {
+    display: grid;
+    color: var(--f-color);
+  }
+
+  .grid_footer li a {
+    color: var(--f-color);
+    text-decoration: none;
+  }
+
+  .col_footer-1 {
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .col_footer-3 {
+    line-height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 8%;
+    text-align: center;
+  }
+  .socialemedie {
+    display: flex;
+  justify-content: center; 
+}
+
+.face {
+  width: 17%;
+  margin:  5% 0 0 0% ; 
+  display: block; 
+}
+
+.inst {
+  width: 17%;
+  margin:  5% 0 0 10% ; 
+  display: block; 
+}
+
+.col_footer-2{
+text-align: center;
+padding-top: 5%;
+}}
+
+@media (min-width: 800px) {
+  .grid_footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: var(--f-color);
+  }
+
+  .grid_footer li a {
+    color: var(--f-color);
+    text-decoration: none;
+  }
+
+  .col_footer-1 {
+    line-height: 45px;
+    padding: 5% 20% 10% 0;
+    text-align: center;
+    font-size: var(--footer-size);
+  }
+
+  .col_footer-2 {
+    padding: 7% 10% 10% 0;
+    text-align: center;
+    font-size: var(--footer-size);
+  }
+  .col_footer-3 {
+    line-height: 38px;
+    padding: 5% 0 0 0;
+    text-align: center;
+    font-size: var(--footer-size);
+  }
+  p{
+    font-weight: bold;
+  }
+
+.socialemedie {
+    display: flex;
+  justify-content: center; 
+}
+
+.face {
+  width: 17%;
+  margin:  5% 0 0 0% ; 
+  display: block; 
+}
+
+.inst {
+  width: 17%;
+  margin:  5% 0 0 10% ; 
+  display: block; 
+}} 
+</style>

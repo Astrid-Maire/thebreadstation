@@ -2,146 +2,155 @@
 import "../styles/global.css";
 ---
 <header>
-    <div class="header-container">
-      <nav>
+    <nav>
         <div class="burger-menu">
-          <div class="container_header">
-            <input class="checkbox" type="checkbox" />
-            <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
+            <div class="container_header nav-container">
+                <input class="checkbox" type="checkbox" />
+                <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+                <div class="menu" id="menu">
+                    <li> <a href="/udvalg">Vores udvalg</a></li>
+                    <li> <a href="/omtema">Om os</a></li>
+                    <li> <a href="/kontakt">Kontakt os</a></li>
+                </div>
             </div>
-            <div class="menu" id="menu">
-              <li><a href="/udvalg">Udvalg</a></li>
-              <li><a href="/kontakt">Kontakt os</a></li>
-              <li><a href="/om">Om os</a></li>
-            </div>
-          </div>
         </div>
-      </nav>
-    </div>
-  </header>
+    </nav>
+</header>
+  
   
   <style>
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    body{
-        background-color: var(--c-color);
-    }
-  
-    @media (max-width: 800px) {
-      .container_header {
-        max-width: 1000px;
-        width: 100%;
-        margin: auto;
-      }
-  
-      .burger-menu {
-        width: 100%;
-        box-shadow: var(--f-color);
-      }
-  
-      .burger-menu li {
-        list-style: none;
-        padding-bottom: 5%;
-      }
-  
-      .burger-menu a {
-        text-decoration: none;
-        color: var(--f-color);
-        font-weight: 500;
-        font-size: var(--header-size);
-        padding: 0.7rem;
-      }
-  
-      .burger-menu a:hover {
-        font-weight: bolder;
-      }
-  
-      .burger-menu .checkbox {
-        position: absolute;
-        display: block;
-        height: 32px;
-        width: 32px;
-        top: 20px;
-        left: 20px;
-        z-index: 5;
-        opacity: 0;
-        cursor: pointer;
-      }
-  
-      .burger-menu .hamburger-lines {
-        display: flex;
-        flex-direction: column;
-        height: 20px;
-        width: 6%;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 2;
-        justify-content: space-between;
-      }
-  
-      .burger-menu .hamburger-lines .line {
-        height: 3px;
-        width: 80%;
-        border-radius: 10px;
-        background: var(--f-color);
-        transition: transform 0.2s ease-in-out;
-      }
-  
-      .burger-menu .hamburger-lines .line2 {
-        transition: transform 0.2s ease-in-out;
-      }
-  
-      .burger-menu .menu {
-        padding-top: 120px;
-        background-color: var();
-        height: 1800%;
-        width: 100%;
-        transform: translateX(-150%);
-        display: flex;
-        flex-direction: column;
-        margin-left: -40px;
-        padding-left: 50px;
-        text-align: center;
-      }
-  
-      .burger-menu .checkbox:checked ~ .menu {
-        transform: translateX(0);
-      }
-  
-      .burger-menu .checkbox:checked ~ .hamburger-lines .line1 {
-        transform: rotate(45deg);
-      }
-  
-      .burger-menu .checkbox:checked ~ .hamburger-lines .line2 {
-        transform: scaleY(0);
-      }
-  
-      .burger-menu .checkbox:checked ~ .hamburger-lines .line3 {
-        transform: rotate(-45deg);
-      }
-    }
-  
-    @media (min-width: 800px) {
-  .header-container {
-    justify-content: flex-end; 
+/*header*/
+@media (max-width: 800px) {
+  .container_header {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
   }
 
+  .burger-menu {
+    width: 100%;
+    box-shadow: 0 1px 4px var(--f-color);
+  }
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    line-height: 42px;
+  }
+
+  .burger-menu .nav-container li {
+    list-style: none;
+  }
+
+  .burger-menu .nav-container a {
+    text-decoration: none;
+    color: var(--f-color);
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+  .burger-menu .nav-container a:hover {
+    font-weight: bolder;
+  }
+
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /*bruger icon*/
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--f-color);
+  }
+
+  .nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .burger-menu .menu {
+    padding-top: 120px;
+    background-color: var(--a-color);
+    height: 1800%;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+   
+    padding-left: 50px;
+    text-align: center;
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .menu {
+    transform: translateX(0);
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 800px) {
   .checkbox {
     display: none;
   }
 
   .menu li {
     list-style: none;
-    margin: 10% 0 0 0 ;
+    margin: 0;
   }
 
   .menu a {
@@ -156,17 +165,22 @@ import "../styles/global.css";
     font-weight: bolder;
   }
 
+  .menu ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  nav a {
+    color: var(--header-size);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   .menu {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 20px;
     margin: auto;
-  }
-
-  nav a {
-    color: var(--f-color);
-    font-weight: bold;
-    text-decoration: none;
   }
 
   header .menu a {
@@ -181,15 +195,16 @@ import "../styles/global.css";
 .menu.active {
   display: block;
 }
-  </style>
+
+ </style>
   
-  <script>
+ <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const burgerIcon = document.querySelector(".checkbox");
-      const menu = document.getElementById("menu");
-  
-      burgerIcon.addEventListener("click", function () {
-        menu.classList.toggle("active");
-      });
-    });
+  const burgerIcon = document.getElementById("burger-icon");
+  const menu = document.getElementById("menu");
+
+  burgerIcon.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
+});
   </script>
