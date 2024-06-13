@@ -4,19 +4,6 @@ import Forsidebilledetekst from "../components/Forsidebilledetekst.astro";
 import Indledning from "../components/Indledning.astro";
 import Tegning from "../components/Tegning.astro";
 import Footer from "../components/Footer.astro";
-import Udvalgmenu from "../components/Udvalgmenu.astro";
-import Varer from "../components/Varer.astro";
-
-const response = await fetch("https://vxotzshdtjxbfwcpegtt.supabase.co/rest/v1/thebreadstation", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZ4b3R6c2hkdGp4YmZ3Y3BlZ3R0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU1MDI5MzMsImV4cCI6MjAzMTA3ODkzM30.SQhJvLFX0bmMD7KqL2O-e_NWt9uh1ne0HQbg1NIJow4",
-  },
-})
-  
-.then((res) => res.json());
-
-const data = response; 
 ---
 <!DOCTYPE html>
 <html lang="da">
@@ -32,13 +19,6 @@ const data = response;
 <Forsidebilledetekst/>
 <Indledning/>
 <Tegning/>
-<section class="data">
-    {data.map(() => {
-         return <Varer data={data.navn} />
-    }  )}
-   
-</section>
-
 <Footer/>
 </body>
 </html>

@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+import Menu2 from "./Menu2.astro";
+---
+<body>
+    <div class="logo">
+    <a href="/index.html">
+        <img  src="/svg/logo.svg" alt="logo" />
+    </div>
+      </a>
+    <div class="forsidemenu">
+        <Menu2 />
+    </div>
+    <div class="forsidebillede">
+        <img src="/img/udvalgbile.jpg" alt="Forsidebilledet">
+    </div>
+    
+</body>
+<style>
+  .forsidebillede {
+        position: relative;
+        z-index: 1;
+    }
+
+    .forsidemenu {
+        position: absolute;
+        z-index: 2; 
+        top: 0; 
+        left: 0; /* Ændret til venstre side */
+        width: 100%; 
+    }
+
+    .logo {
+        position: absolute;
+        width: 13%;
+        height: 20%;
+        display: flex;
+    right: 88%;
+    padding: 2%;
+    z-index: 3;
+    }
+
+</style>

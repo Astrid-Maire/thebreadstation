@@ -1,11 +1,11 @@
 ---
 import "../styles/global.css";
 ---
+
 <body>
   <div class="firekant-tekst"> 
 <div class="firekant">
-    <div class="firekant-1"></div>
-    <img src="img/hanværk.jpg" alt="">
+    <img src="img/hanværk.jpg" alt="" class="ramme">
   </div>
   <div class="firekant">
     <h2>Vores hånværk </h2>
@@ -20,17 +20,11 @@ import "../styles/global.css";
   body{
     background-color: var(--c-color);
   }
-  .firekant-1 {
-    width: 91%;  
-    height: 99%; 
-    background-color: var(--e-color); 
-    box-shadow: 0 1px 15px 0 var(--f-color);
-    margin: 2% 0 2% 2%;
-    z-index: 1;
-  }
+  .ramme {
+    border: 30px solid var(--e-color); 
+}
 
   img{
-    position: relative;
     width: 50%;
     position: absolute;
     top: 195%; 
@@ -39,7 +33,8 @@ import "../styles/global.css";
 
   .firekant-tekst{
     display: grid;
-    grid-template-columns: 10fr 7fr;
+    grid-template-columns: 9fr 7fr;
+    background-color: var(--c-color);
   }
 
   p{
