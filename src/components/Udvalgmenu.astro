@@ -2,134 +2,203 @@
 import "../styles/global.css";
 ---
 <header>
-    <div class="header-container">
-        <nav>
-            <div class="burger-menu">
-                <div class="container_header">
-                    <input class="checkbox" type="checkbox" />
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>
-                    <div class="menu" id="menu">
-                        <ul>
-                            <li>
-                                <a href="/udvalg" class="dropdown-trigger">Udvalg</a>
-                                <div class="dropdown-box"> 
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Brød</a></li>
-                                        <li><a href="#">Boller</a></li>
-                                        <li><a href="#">Mel</a></li>
-                                        <li><a href="#">Kage</a></li>
-                                        <li><a href="#">Wienerbrød</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="/kontakt">Kontakt os</a></li>
-                            <li><a href="/om">Om os</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+  <nav>
+      <ul>
+          <li class="dropdown-menu">
+              <span class="menu-title" id="menu-title">Vores udvalg</span>
+              <ul class="menu" id="dropdown-menu">
+                  <li><a href="/udvalg?grupper=mel">Mel</a></li>
+                  <li><a href="/udvalg?grupper=brod">Brød</a></li>
+                  <li><a href="/udvalg?grupper=boller">Boller</a></li>
+                  <li><a href="/udvalg?grupper=kage">Kage</a></li>
+              </ul>
+          </li>
+      </ul>
+      <div class="burger-menu">
+          <div class="container_header nav-container">
+              <input class="checkbox" type="checkbox" id="burger-checkbox" />
+              <div class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+              </div>
+              <div class="menu" id="burger-menu">
+                  <li><a href="/udvalg">Vores udvalg</a></li>
+                  <li><a href="/om">Om os</a></li>
+                  <li><a href="/kontakt">Kontakt os</a></li>
+              </div>
+          </div>
+      </div>
+  </nav>
 </header>
 
-<style>
-    .header-container {
-        display: flex;
-        justify-content: flex-end; 
-        align-items: center;
-        padding: 0 20px;
-    }
-
-    body {
-        background-color: var(--c-color);
-    }
-
-    .checkbox {
-        display: none;
-    }
-
-    .menu li {
-        list-style: none;
-        display: inline; 
-        margin-right: 20px; 
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: var(--a-color); 
-        font-size: var(--header-size); 
-        display: inline-block; 
-        padding: 20px;
-    }
-
-    nav a {
-        color: var(--a-color);
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    header .menu a {
-        text-decoration: none;
-        color: var(--a-color);
-        font-size: var(--header-size);
-        align-items: center;
-        justify-content: flex-end;
-    }
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        background-color: var(--c-color);
-        border: 1px solid var(--f-color);
-        border-radius: 5px;
-        padding: 10px;
-        right: 20px;
-        top: 100%;
-    }
-
-    .dropdown-menu.active {
-        display: block;
-    }
-
-    .dropdown-menu li {
-        margin-bottom: 5px; 
-    }
-
-    .dropdown-box {
-        display: none;
-    }
-
-    .dropdown-box.active {
-        display: block; 
-    }
-</style>
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const dropdownTriggers = document.querySelectorAll(".dropdown-trigger");
+document.addEventListener("DOMContentLoaded", function () {
+  const menuTitle = document.getElementById("menu-title");
+  const dropdownMenu = document.getElementById("dropdown-menu");
+  const burgerCheckbox = document.getElementById("burger-checkbox");
+  const burgerMenu = document.getElementById("burger-menu");
 
-    dropdownTriggers.forEach(function(dropdownTrigger) {
-        dropdownTrigger.addEventListener("mouseenter", function (event) {
-            event.preventDefault();
-            const dropdownMenu = dropdownTrigger.nextElementSibling;
-            const dropdownBox = dropdownMenu.querySelector(".dropdown-box");
-            dropdownMenu.classList.add("active");
-            dropdownBox.classList.add("active");
-        });
+  menuTitle.addEventListener("click", function () {
+      dropdownMenu.classList.toggle("active");
+  });
 
-        dropdownTrigger.addEventListener("mouseleave", function (event) {
-            const dropdownMenu = dropdownTrigger.nextElementSibling;
-            const dropdownBox = dropdownMenu.querySelector(".dropdown-box");
-            dropdownMenu.classList.remove("active");
-            dropdownBox.classList.remove("active");
-        });
-    });
+  burgerCheckbox.addEventListener("change", function () {
+      burgerMenu.classList.toggle("active");
+  });
 });
 </script>
 
+<style>
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.dropdown-menu {
+  position: relative;
+  left: 50px;
+}
 
-   
+.menu-title {
+  cursor: pointer;
+  padding: 30px;
+  font-weight: bold;
+  color: var(--f-color);
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  border: 1px solid var(--f-color);
+  background-color: var(--a-color);
+  padding: 30px;
+  flex-direction: column;
+    list-style: none;
+}
+
+.menu a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: var(--f-color);
+}
+
+.menu.active {
+  display: block;
+}
+
+/* Burger menu styles */
+@media (max-width: 800px) {
+  .burger-menu {
+      width: 100%;
+      box-shadow: 0 1px 4px var(--f-color);
+  }
+
+  .nav-container {
+      display: flex;
+      align-items: center;
+      height: 62px;
+      line-height: 42px;
+  }
+
+  .burger-menu .nav-container li {
+      list-style: none;
+  }
+
+  .burger-menu .nav-container a {
+      text-decoration: none;
+      color: var(--f-color);
+      font-weight: 500;
+      font-size: 1.2rem;
+      padding: 0.7rem;
+  }
+
+  .burger-menu .nav-container a:hover {
+      font-weight: bolder;
+  }
+
+  .nav-container {
+      display: block;
+      position: relative;
+      height: 60px;
+  }
+
+  .nav-container .checkbox {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 32px;
+      top: 20px;
+      right: 20px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer;
+  }
+
+  .nav-container .hamburger-lines {
+      display: block;
+      height: 26px;
+      width: 32px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  .nav-container .hamburger-lines .line {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: var(--f-color);
+  }
+
+  .nav-container .hamburger-lines .line1 {
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out;
+  }
+
+  .nav-container .hamburger-lines .line2 {
+      transition: transform 0.2s ease-in-out;
+  }
+
+  .nav-container .hamburger-lines .line3 {
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out;
+  }
+
+  .burger-menu .menu {
+      padding-top: 120px;
+      background-color: var(--a-color);
+      height: 100vh; /* Fuld højde */
+      width: 100%;
+      transform: translate(-150%);
+      display: flex;
+      flex-direction: column;
+      padding-left: 50px;
+      text-align: center;
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .menu {
+      transform: translateX(0);
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+      transform: rotate(45deg);
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+      transform: scaleY(0);
+  }
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+      transform: rotate(-45deg);
+  }
+}

@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+---
+
+<body>
+    <div class="k2">
+        <div class="kort">
+    <img src="img/kort.jpg" alt="Beskrivelse af billedet" class="ramme">
+    </div>
+    <div class="adr">
+        <h2>Adresse</h2>
+        <p>The Bread Station ApS</p>
+        <p>Charlottenlund Stationsplads 2</p>
+        <p>2920 Charlottenlund</p>
+    </div>
+    </div>
+</body>
+
+<style>
+img{
+    width: 100%;
+}
+.ramme {
+    border: 30px solid var(--e-color); 
+    padding-left: 3px;
+}
+
+.k2{
+display: grid;
+grid-template-columns: 12fr 9fr;
+background-color: var(--d-color);
+}
+
+p{
+    font-size: var(--p-size);
+    text-align: center;
+    line-height: 37px;
+    padding-bottom: 50px;
+    margin-left: 20px;
+}
+
+h2{
+    font-size: var(--h2-size);
+    text-align: center;
+    padding: 120px 0 50px 30px;
+}
+</style>

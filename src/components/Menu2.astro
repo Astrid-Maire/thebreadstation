@@ -1,29 +1,40 @@
 ---
+import Varer from "../components/Varer.astro";
 import "../styles/global.css";
 ---
 <header>
-    <nav>
-        <div class="burger-menu">
-            <div class="container_header nav-container">
-                <input class="checkbox" type="checkbox" />
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-                <div class="menu" id="menu">
-                    <li> <a href="/udvalg">Vores udvalg</a></li>
-                    <li> <a href="/omtema">Om os</a></li>
-                    <li> <a href="/kontakt">Kontakt os</a></li>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <nav>
+      <div class="burger-menu">
+          <div class="container_header nav-container">
+              <input class="checkbox" type="checkbox" id="menu-toggle"/>
+              <label for="menu-toggle" class="hamburger-lines">
+                  <span class="line line1"></span>
+                  <span class="line line2"></span>
+                  <span class="line line3"></span>
+              </label>
+              <ul class="menu" id="menu">
+                  <li>
+                      <a href="#" id="udvalg-link">Vores udvalg</a>
+                      <ul class="submenu" id="udvalg-submenu">
+                          <li><a href="/udvalg?grupper=mel">Mel</a></li>
+                          <li><a href="/udvalg?grupper=brod">Brød</a></li>
+                          <li><a href="/udvalg?grupper=boller">Boller</a></li>
+                          <li><a href="/udvalg?grupper=kage">Kage</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="/om">Om os</a></li>
+                  <li><a href="/kontakt">Kontakt os</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 </header>
+  <Varer/>
   
-  
+
   <style>
 /*header*/
+
 @media (max-width: 800px) {
   .container_header {
     max-width: 1000px;
@@ -33,9 +44,7 @@ import "../styles/global.css";
 
   .burger-menu {
     width: 100%;
-    box-shadow: 0 1px 4px var(--f-color);
   }
-
   .nav-container {
     display: flex;
     align-items: center;
@@ -56,22 +65,22 @@ import "../styles/global.css";
   }
 
   .burger-menu .nav-container a:hover {
-    font-weight: bolder;
+    font-weight: bold;
   }
 
   .nav-container {
     display: block;
     position: relative;
-    height: 60px;
+    height: 40px;
   }
 
   .nav-container .checkbox {
     position: absolute;
     display: block;
     height: 32px;
-    width: 32px;
-    top: 20px;
-    right: 20px;
+    width: 100%;
+    top: 5px;
+    right: 100px;
     z-index: 5;
     opacity: 0;
     cursor: pointer;
@@ -99,6 +108,9 @@ import "../styles/global.css";
     background: var(--f-color);
   }
 
+  .nav-container .hamburger-lines .line {
+display: flex;
+justify-content: end;}
   .nav-container .hamburger-lines .line1 {
     transform-origin: 0% 0%;
     transition: transform 0.4s ease-in-out;
@@ -121,7 +133,6 @@ import "../styles/global.css";
     transform: translate(-150%);
     display: flex;
     flex-direction: column;
-   
     padding-left: 50px;
     text-align: center;
   }
@@ -141,65 +152,78 @@ import "../styles/global.css";
   .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg);
   }
-}
-
-@media (min-width: 800px) {
-  .checkbox {
-    display: none;
-  }
-
-  .menu li {
-    list-style: none;
-    margin: 0;
-  }
-
-  .menu a {
-    text-decoration: none;
-    color: var(--f-color);
-    font-size: 18px;
-    display: block;
-    padding: 20px;
-  }
-
-  .menu a:hover {
-    font-weight: bolder;
-  }
-
-  .menu ul {
-    padding: 0;
-    list-style: none;
-  }
-
-  nav a {
-    color: var(--header-size);
-    font-weight: bold;
-    text-decoration: none;
-  }
-
   .menu {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 20px;
-    margin: auto;
-  }
+  display: none;
+}
+.submenu {
+  list-style: none;
+}
+.checkbox:checked ~ .menu .submenu {
+  list-style-type: none;
+}
+}@media (min-width: 800px) {
+            .checkbox {
+                display: none;
+            }
 
-  header .menu a {
-    text-decoration: none;
-    color: var(--f-color);
-    font-size: var(--header-size);
+            .menu li {
+                list-style: none;
+                margin: 0;
+            }
+
+            .menu a {
+                text-decoration: none;
+                color: var(--f-color);
+                font-size: 18px;
+                display: block;
+                padding: 20px;
+                font-weight: normal; 
+              transition: font-weight 0.3s;
+            }
+
+            .menu a:hover {
+                font-weight: bold;
+            }
+
+            .menu ul {
+                padding: 0;
+                list-style: none;
+            }
+
+            nav a {
+                color: var(--header-size);
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 20px;
+                margin: auto;
+            }
+ header .menu a {
+  color: var(--f-color);
+   font-size: var(--header-size);
     align-items: center;
-    justify-content: flex-end;
+   justify-content: flex-end;
   }
 }
 
-.menu.active {
+        .menu.active {
+            display: block;
+        }
+
+        .submenu {
+  display: none;
+}
+
+.submenu.active {
   display: block;
 }
-
- </style>
-  
- <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    </style>
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
   const burgerIcon = document.getElementById("burger-icon");
   const menu = document.getElementById("menu");
 
@@ -207,4 +231,15 @@ import "../styles/global.css";
     menu.classList.toggle("active");
   });
 });
-  </script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const udvalgLink = document.getElementById("udvalg-link");
+  const udvalgSubmenu = document.getElementById("udvalg-submenu");
+
+  udvalgLink.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    udvalgSubmenu.classList.toggle("active");
+  });
+});
+    </script>

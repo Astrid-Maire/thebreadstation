@@ -1,11 +1,23 @@
+---
+const {data} = Astro.props;
+console.log(data);
 
---- 
-const { data } = Astro.props;
-console.log(data); 
-
---- 
+---
 
 <body>
+    <article>
+        <h2>{data.name}</h2>
+        <img src="" alt="">
+<p>jj</p>
+<p>jj</p>
+
+    </article>
    
-  
+  <p>jjj</p>
 </body>
+<style>
+    p{
+        font-size: 100%;
+    }
+
+</style>
