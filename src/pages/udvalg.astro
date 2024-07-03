@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
-import Varer from "../components/Varer.astro";
+import Udvalgbil from "../components/Udvalgbil.astro";
 
 const data = await fetch("https://vxotzshdtjxbfwcpegtt.supabase.co/rest/v1/thebreadstation", { 
     method: "GET", 
@@ -23,14 +23,8 @@ console.log(data);
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     </head>
 <body>
-    <section class="id">
-        {
-        data.map((id) => {
-            return <Varer data={id} />;
-        })
-        }
-            </section>
-        
+    <Udvalgbil/>      
+
 <Footer/>
     </body>
     <style>
